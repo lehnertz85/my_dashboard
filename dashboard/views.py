@@ -1,3 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+from django.template import loader
+
+from django.http import HttpResponse
+
+
+def index(request):
+    html = 'We made it!!'
+
+    return HttpResponse(html)
