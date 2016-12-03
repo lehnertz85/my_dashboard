@@ -1,0 +1,9 @@
+[
+  {
+    "model": "dashboard.general",
+    "pk": 1,
+    "fields": {
+      "title": "Plex Dashboard - Manage your plex services"
+    }
+  }
+]

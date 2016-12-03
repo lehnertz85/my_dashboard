@@ -1,1 +1,4 @@
 Django==1.10.3
+django-debug-toolbar
+psutil
+git+git://github.com/santiagobasulto/debug-inspector-panel

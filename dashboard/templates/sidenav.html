@@ -1,0 +1,27 @@
+<!-- Side menu /-->
+<nav class="orange-border-bottom thin-border-2">
+    <div class="nav-wrapper black">
+        <a href="{% url 'index' %}" class="brand-logo orange-text" style="padding-left: 15px">Plex Dashboard</a>
+        <a href="" data-activates="slide-out" class="button-collapse show-on-large right"><i class="material-icons orange-text darken-4">menu</i></a>
+
+        <ul id="slide-out" class="side-nav grey darken-2">
+            <li class="black lighten-3 orange-border-bottom orange-border-left thin-border-2">
+               <a href="#settings-modal" class="modal-trigger orange-text right-aligned">Menu<i class="orange-text darken-4 material-icons">{{ settings_icon.icon }}</i></a>
+            </li>
+            {% if settings%}
+                {% for app in settings %}
+                    {% if app.is_visible == True and app.app_name != 'Settings' %}
+{#                            {% url 'iframe' app.id as from_template %}#}
+                        <li class= "white darken-2 grey-border-bottom thin-border-1"><a href="{% url 'iframe' app.id %}" class="waves-effect waves-orange"><i class="orange-text darken-4 material-icons ">{{ app.icon }}</i>{{ app.app_name }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        <li class="orange-border-bottom thin-border-1">
+            <a href="#drives-modal" class="modal-trigger black orange-text ">Drives<i class="orange-text darken-4 material-icons">computer</i></a>
+        </li>
+        <li class="orange-border-bottom thin-border-1">
+            <a href="#help-modal" class="modal-trigger black orange-text">Help<i class="orange-text darken-4 material-icons">help</i></a>
+        </li>
+        </ul>
+    </div>
+</nav>

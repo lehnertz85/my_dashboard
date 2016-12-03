@@ -1,0 +1,110 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title.title }}</title>
+        {% else %}
+        <title>Dashboard</title>
+    {% endif %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'css/materialize.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plex-dashboard.css' %}" rel="stylesheet">
+</head>
+<body class="grey darken-3">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+{%  include 'sidenav.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% if drives %}
+                {% for drive, percent in drives.items %}
+            <div class="col s12 m12 l6">
+              <div class="card black">
+                <div class="card-content">
+                  <div class="valign-wrapper">
+                    <h5 class="center orange-text col s4 "> {{ drive }} [{{ percent }}%]</h5>
+                    <div class="col s8">
+                    <div class="progress ">
+                        <div class="determinate" style="width: {{ percent }}%"></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="col s12 m12 l12">
+          <div class="card black">
+            <div class="card-content white-text">
+              <p><span class="orange-text">Welcome to Plex Dashboard!</span> <br/><br>
+                  The top-right is a button to the menu. The menu lists all the services you
+                  wish to view. The cog next to the memu takes you to the settings. Settings is where you can modify
+                  the services in the menu. You can enable, disable, delete or add more.
+                  <ul>
+                    <li>Bear in mind, some websites don't allow themselves to be displayed in an iFrame. Github in one of them.</li>
+                 </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col s12 m12 l12">
+          <div class="card black">
+            <div class="card-content white-text">
+              <p><span class="orange-text"> Icons:</span> <br/><br>
+                  Google Material icons are used. You can go to Google's <a href="https://material.io/icons/" target="_blank">materiial.io</a>  and search for icons.
+                  Once you have identified the icon you want, note the name. If the name includes multiple words,
+                  then type a _ between the words.<br>
+                  <ul class="browser-default">
+                    <li> Example: <code>"zoom in"</code> would turn into <code>"zoom_in"</code>.</li>
+                  </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{%  include 'modals.html' %}
+
+<script type="text/javascript" src="{% static 'js/jquery-3.1.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/sidnav.js' %}"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+  $('#settings-modal').modal();
+     $('#help-modal').modal();
+      $('#drives-modal').modal();
+});
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('input.validate').characterCounter();
+  });
+</script>
+
+</body>
+</html>

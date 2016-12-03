@@ -1,0 +1,154 @@
+<!-- Settings Model /-->
+<form method="POST" action="">{% csrf_token %}
+<div id="settings-modal" class="modal modal-fixed-footer">
+    <div class="modal-content orange-text darken-4 orange-border-bottom thin-border-2"><h4>Settings</h4>
+     <div class="divider"></div>
+        <ul class="collapsible popout" data-collapsible="accordion">
+            {{ servicesformset.management_form }}
+            {% for serviceForm in servicesformset.forms %}
+                <li>
+                  <div class="collapsible-header black-text">
+                  {{ serviceForm.id }}
+                      <strong>
+                          {% if serviceForm.app_name.value == None %}
+                              Add New
+                          {% else %}
+                            {{ serviceForm.app_name.value }}
+                          {% endif %}
+                      </strong>
+                      {% for error in serviceForm.non_field_errors %}
+                        <span class="new badge error" data-badge-caption="{{ error }}">{{ error }}</span>
+                      {% endfor %}
+                  </div>
+                  <div class="collapsible-body">
+                      <div class="container">
+
+                          <div class="row">
+                              <div class="input-field col s12 m7 l7">
+                                  {{ serviceForm.app_name }}
+                                  <label for="{{ serviceForm.app_name.id_for_label }}" class="active" > Service's Name:</label>
+                              </div>
+                              <div class="input-field col s12 m5 l5">
+                                  <i class="prefix right with-gap material-icons"> {{ app.icon }}</i>
+                                  {{ serviceForm.icon }}
+                                  <label for="{{ serviceForm.icon.id_for_label }}" class="active"> Select an Icon:</label>
+                              </div>
+                          </div>
+                          <div class="input-field ">
+                              {{ serviceForm.url }}
+                              <label for="{{ serviceForm.url.id_for_label }}" class="active"> URL:</label>
+                          </div>
+                          <div class="row">
+                              <p class="left col s12 m12 l6">
+                                  {{ serviceForm.is_visible }}
+                                <label for="{{ serviceForm.is_visible.id_for_label }}">Do you want this application visible?</label>
+                              </p>
+                              <p class="right col s12 m12 l6 ">
+                                  {{ serviceForm.DELETE }}
+                                <label for="{{ serviceForm.DELETE.id_for_label }}" class="red-text">Do you want to remove this app from Plex Dashboard?</label>
+                              </p>
+                        </div>
+                      </div>
+                  </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="modal-footer black">
+        <a href="" class="modal-action modal-close waves-effect waves-orange btn-flat orange-text darken-4">Cancel</a>
+        <a href="" class="waves-effect waves-orange btn-flat orange-text darken-4"><input type="submit" value="Save"></a>
+    </div>
+</div>
+
+{# Drives Modal #}
+    <div id="drives-modal" class="modal modal-fixed-footer">
+        <div class="modal-content orange-text darken-4 orange-border-bottom thin-border-2">
+            <h4>Drives</h4>
+            <div class="divider"></div>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                {{ drivesformset.management_form }}
+                {% for driveForm in drivesformset.forms %}
+                <li class="orange-border thin-border-1">
+                  <div class="collapsible-header black-text">
+                      <strong>
+                          {% if driveForm.letter.value == None %}
+                              Add New
+                          {% else %}
+                            {{ driveForm.letter.value }}
+                          {% endif %}
+                      </strong>
+                        {% for error in driveForm.non_field_errors %}
+                            <span onchange="Materialize.toast('yay toast', 4000, 'red')" class="new badge error" data-badge-caption="{{ error }}"></span>
+                        {% endfor %}
+                  </div>
+                <div class="collapsible-body">
+                    <div class="container">
+                        <div class="row">
+                        {{ driveForm.id }}
+                            <div class="input-field col s12 m7 l7">
+                                <br>
+                                {{ driveForm.letter }}
+                                <label for="{{ driveForm.letter.id_for_label }}" class="active" >Drive:</label>
+                            </div>
+                            <div class="col s12 m3 l3">
+                                <p class="input-field ">
+                                    {{ driveForm.DELETE }}
+                                    <label for="{{ driveForm.DELETE.id_for_label }}" class="red-text">Delete:</label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="modal-footer black">
+            <a href="" class=" modal-action modal-close waves-effect waves-orange btn-flat orange-text darken-4">Cancel</a>
+            <a href="" class=" waves-effect waves-orange btn-flat orange-text darken-4"><input type="submit" value="Save"></a>
+        </div>
+    </div>
+</form>
+
+{# Help Modal #}
+<div id="help-modal" class="modal modal-fixed-footer">
+    <div class="modal-content orange-border-bottom thin-border-2 grey container">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs black">
+                    <li class="tab col s4"><a class="active orange-text darken-4" href="#new_drive">Add a drive</a></li>
+                    <li class="tab col s4"><a class="orange-text darken-4" href="#new-service">Add a service</a></li>
+                </ul>
+            </div>
+            <div class="black card help-card col s12" id="new_drive">
+                <div class="card-content white-text">
+                Adding drives is easy.
+
+                   <ul class="browser-default">
+                       <li class=""><strong>Windows:</strong>
+                           <ul class="browser-default">
+                                <li> Add the drive letter: 'c:\'</li>
+                           </ul>
+                       </li>
+                       <li class=""><strong>Linux / Mac:</strong>
+                           <ul class="browser-default">
+                                <li> Enter the root of the drive: '/' or the path: '/dev/sda'</li>
+                           </ul>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="black card col s12" id="new-service">
+                <div class="card-content white-text">
+                To add a new service, click the cog next to the menu. A modal will appear with a list of existing services
+                    in the database. You can make any app invisible so it won't appear on the menu, or you can delete the
+                    service from database. Both are done through a checkbox for each service.
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer black">
+        <a href="" class=" modal-action modal-close waves-effect waves-green btn-flat orange-text darken-4">Close</a>
+    </div>
+</div>
