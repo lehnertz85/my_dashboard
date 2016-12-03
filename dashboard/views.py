@@ -8,14 +8,11 @@ from models import Services, General, Drives
 from psutil import disk_usage
 import logging
 
-from inspector_panel import debug
-
 logger = logging.getLogger('dashboard')
 
 
 # TODO:
 #   1. Login screen w/ change password and add user(?)
-#   2. Error checking in forms
 #   3. Convert to one view * probably won't do this.
 
 
@@ -45,7 +42,7 @@ def index(request):
     else:
         servicesformset = ServicesFormSet(prefix='serviceForms')
         drivesformset = DrivesFormSet(prefix='driveForms')
-        print("++++++ craeted forms")
+        #print("++++++ craeted forms")
 
     # Calculate Disk usage
     for d in drive_letters:
