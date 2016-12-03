@@ -11,3 +11,9 @@ Everything is working. Some cleanup is needed. There is a TODO list.
    4. maybe create installers with [pyinstaller](http://www.pyinstaller.org/), or stick with git
    
 ![What is looks like](http://i.imgur.com/jCHWMo6.png)
+
+![The menu](http://i.imgur.com/PODI342.png)
+
+![The settings](http://i.imgur.com/QdgBj2M.png)
+
+
