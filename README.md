@@ -10,4 +10,4 @@ Everything is working. Some cleanup is needed. There is a TODO list.
    3. Create update mechanism
    4. maybe create installers with [pyinstaller](http://www.pyinstaller.org/), or stick with git
    
-![What is looks like](http://imgur.com/a/uWe1n)
+![What is looks like](http://i.imgur.com/jCHWMo6.png)
