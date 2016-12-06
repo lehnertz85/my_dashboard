@@ -48,7 +48,7 @@ def index(request):
     for d in drive_letters:
         usage = disk_usage(d.letter)
         percentage = usage.percent
-        logger.debug('\"**** Drive ' + d.letter + ' has ' + str(percentage) + '% space left!!')
+        #logger.debug('\"**** Drive ' + d.letter + ' has ' + str(percentage) + '% space left!!')
         drives[d.letter] = percentage
 
     context = {
@@ -91,7 +91,6 @@ def getiframe(request, app_id=2):
     else:
         servicesformset = ServicesFormSet(prefix='serviceForms')
         drivesformset = DrivesFormSet(prefix='driveForms')
-        print("++++++ craeted forms")
 
     # Calculate Disk usage
     for d in drive_letters:
@@ -113,3 +112,6 @@ def getiframe(request, app_id=2):
     }
 
     return render(request, 'app_iframe.html', context)
+
+# def login(request):
+#     #some stuff

@@ -92,19 +92,7 @@
 
 <script type="text/javascript" src="{% static 'js/jquery-3.1.1.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/sidnav.js' %}"></script>
-<script type="text/javascript">
- $(document).ready(function() {
-  $('#settings-modal').modal();
-     $('#help-modal').modal();
-      $('#drives-modal').modal();
-});
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-    $('input.validate').characterCounter();
-  });
-</script>
+<script type="text/javascript" src={% static "js/main.js" %}></script>
 
 </body>
 </html>
