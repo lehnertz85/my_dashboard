@@ -1,29 +1,90 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.contrib import messages
+from django.contrib.auth import authenticate, logout, update_session_auth_hash, login
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from django.forms import modelformset_factory
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 
 from dashboard.forms import ServicesForm, DrivesForm, BaseServicesFormModelFormSet
 from models import Services, General, Drives
 
+from plex_dashboard.utils import analyze_errors
+
 from psutil import disk_usage
 import logging
+import json
 
 logger = logging.getLogger('dashboard')
 
 
-# TODO:
-#   1. Login screen w/ change password and add user(?)
-#   3. Convert to one view * probably won't do this.
+def login_view(request):
+    title = General.objects.get(pk=1)
+
+    if request.method == 'POST':
+        loginform = AuthenticationForm(request)
+
+        if request.method == 'POST':
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user, backend=None)
+                messages.success(request, 'Logged in!')
+                return redirect(request.GET.get('next'))
+            else:
+                messages.error(request, 'Username or password is incorrect')
+    else:
+        loginform = AuthenticationForm()
+
+    context = {
+        'loginform': loginform,
+        'title': title,
+    }
+
+    return render(request, 'login.html', context)
 
 
+@login_required()
+def logout_view(request):
+    logout(request)
+    return redirect('/dashboard/')
+
+
+@login_required
+def profile_view(request, username=None):
+    title = General.objects.get(pk=1)
+
+    if request.method == 'POST':
+        changeform = PasswordChangeForm(request.user, request.POST)
+
+        if changeform.is_valid():
+            user = changeform.save()
+            update_session_auth_hash(request, user)
+            return redirect('/dashboard/')
+
+    else:
+        changeform = PasswordChangeForm(username)
+
+    context = {
+        'username': username,
+        'changeform': changeform,
+        'title': title,
+    }
+
+    return render(request, 'profile.html', context)
+
+
+@login_required
 def index(request):
     # Variables:
     drives = {}
+    username = request.user
 
     # Do all the queries
-    settings = Services.objects.all()
+    services = Services.objects.all()
     drive_letters = Drives.objects.all()
-    settings_icon = Services.objects.get(app_name__exact='Settings')
+    settings_icon = Services.objects.get(service_name__exact='Settings')
     title = General.objects.get(pk=1)
 
     # Create the Forms
@@ -38,11 +99,15 @@ def index(request):
         if servicesformset.is_valid() and drivesformset.is_valid():
             servicesformset.save()
             drivesformset.save()
-            return HttpResponseRedirect('/dashboard/')
+            success_message = json.dumps({"success": "Saved!!!"})
+            return HttpResponse(success_message)
+        else:
+            # Reconfigure the errors becuase of MaterializesCSS' toasts
+            errors = analyze_errors(drivesformset, servicesformset)
+            return HttpResponse(errors)
     else:
         servicesformset = ServicesFormSet(prefix='serviceForms')
         drivesformset = DrivesFormSet(prefix='driveForms')
-        #print("++++++ craeted forms")
 
     # Calculate Disk usage
     for d in drive_letters:
@@ -54,26 +119,27 @@ def index(request):
     context = {
         'drivesformset': drivesformset,
         'servicesformset': servicesformset,
-        'settings': settings,
+        'services': services,
         'settings_icon': settings_icon,
         'title': title,
         'drives': drives,
+        'username': username,
     }
 
     return render(request, 'base.html', context)
 
 
 # Create the iframe
+@login_required
 def getiframe(request, app_id=2):
-    # Variables:
-    drives = {}
+
+    username = request.user
 
     url = Services.objects.get(id=app_id)
 
     settings = Services.objects.all()
     settings_icon = Services.objects.get(app_name__exact='Settings')
     title = General.objects.get(pk=1)
-    drive_letters = Drives.objects.all()
 
     # Create the Forms
     ServicesFormSet = modelformset_factory(Services, can_delete=True, form=ServicesForm,
@@ -87,19 +153,17 @@ def getiframe(request, app_id=2):
         if servicesformset.is_valid() and drivesformset.is_valid():
             servicesformset.save()
             drivesformset.save()
-            return HttpResponseRedirect('/dashboard/')
+            success_message = json.dumps({"success": "Saved!!!"})
+            return HttpResponse(success_message)
+        else:
+            # Reconfigure the errors becuase of MaterializesCSS' toasts
+            errors = analyze_errors(drivesformset, servicesformset)
+            return HttpResponse(errors)
     else:
         servicesformset = ServicesFormSet(prefix='serviceForms')
         drivesformset = DrivesFormSet(prefix='driveForms')
 
-    # Calculate Disk usage
-    for d in drive_letters:
-        usage = disk_usage(d.letter)
-        percentage = usage.percent
-        #logger.debug('\"**** Drive ' + d.letter + ' has ' + str(percentage) + ' space left!!')
-        drives[d.letter] = percentage
-
-    logger.debug('****  Created iframe -- ')
+    #logger.debug('****  Created iframe -- ')
 
     context = {
         'drivesformset': drivesformset,
@@ -107,11 +171,8 @@ def getiframe(request, app_id=2):
         'settings': settings,
         'settings_icon': settings_icon,
         'title': title,
-        'drives': drives,
-        'url': url
+        'url': url,
+        'username': username,
     }
 
     return render(request, 'app_iframe.html', context)
-
-# def login(request):
-#     #some stuff

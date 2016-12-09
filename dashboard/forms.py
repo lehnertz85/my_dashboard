@@ -3,6 +3,7 @@ import re
 
 from django import forms
 from django.forms import BaseModelFormSet
+from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy as _
 from psutil import disk_usage
 
@@ -21,25 +22,25 @@ class ServicesForm(forms.ModelForm):
         model = Services
         fields = '__all__'
         labels = {
-            'app_name': 'Service\'s Name:',
+            "service_name": 'Service\'s Name:',
             'icon': 'Select and icon:',
             'url': 'Enter a URL:',
             'is_visible': 'Do you want this application visible?'
         }
         required = {
-            'app_name': 'false',
+            'service_name': 'false',
             'icon': 'false',
             'url': 'false',
             'is_visible': 'false',
         }
         max_length = {
-            'app_name': '512',
+            'service_name': '512',
             'icon': '512',
             'url': '512',
         }
 
         widgets = {
-            'app_name': forms.TextInput(attrs={'class': 'validate', 'length': '512', 'placeholder': 'Enter the service\'s name:'}),
+            "service_name": forms.TextInput(attrs={'class': 'validate', 'length': '512', 'placeholder': 'Enter the service\'s name:'}),
             'icon': forms.TextInput(attrs={'class': 'validate', 'placeholder': ' Choose an icon'}),
             'url': forms.TextInput(attrs={'class': 'validate', 'placeholder': 'What is the URL', 'length': '512'}),
         }
@@ -83,7 +84,7 @@ class DrivesForm(forms.ModelForm):
 
         if platform.system() == "Windows":
             if not re.search(r"^[a-zA-Z]:\\$", letter):
-                raise forms.ValidationError(_('Drive letter must be <letter>:\\'))
+                raise forms.ValidationError(_('Drive letter is incorrect. Look at Help for more info'))
 
         try:
             # Test to make sure the drive is present on the computer.

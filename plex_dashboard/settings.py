@@ -46,8 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dashboard',
-    'debug_toolbar',
-    'inspector_panel',
+    # 'debug_toolbar',
+    # 'inspector_panel',
 ]
 
 MIDDLEWARE = [
@@ -55,26 +55,25 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
 
-DEBUG_TOOLBAR_PANELS = (
-    'inspector_panel.panels.inspector.InspectorPanel',
-    'debug_toolbar.panels.request.RequestPanel',
-    'debug_toolbar.panels.signals.SignalsPanel',
-)
+# DEBUG_TOOLBAR_PANELS = (
+#     'inspector_panel.panels.inspector.InspectorPanel',
+#     'debug_toolbar.panels.request.RequestPanel',
+#     'debug_toolbar.panels.signals.SignalsPanel',
+# )
 
 ROOT_URLCONF = 'plex_dashboard.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': []
-        ,
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,6 +132,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = '/login/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/

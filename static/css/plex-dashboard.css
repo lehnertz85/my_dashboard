@@ -37,10 +37,6 @@
     border-width: 3px;
 }
 
-.icon-orange {
-    color: orange;
-}
-
 .modal {
     width: 70% !important ;
     max-height: 100% !important
@@ -128,4 +124,22 @@ iframe#ifm {
 
 .tabs .indicator {
   background-color: darkorange;
+}
+
+.input-field input[type=text]:focus + label {
+ color: darkorange;
+}
+
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid darkorange;
+ box-shadow: 0 1px 0 0 darkorange;
+}
+
+.input-field input[type=password]:focus + label {
+ color: darkorange;
+}
+
+.input-field input[type=password]:focus {
+ border-bottom: 1px solid darkorange;
+ box-shadow: 0 1px 0 0 darkorange;
 }

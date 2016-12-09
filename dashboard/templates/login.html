@@ -1,0 +1,75 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title.title }}</title>
+        {% else %}
+        <title>Dashboard</title>
+    {% endif %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'css/materialize.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plex-dashboard.css' %}" rel="stylesheet">
+</head>
+<body class="grey">
+
+<nav class="orange-border-bottom thin-border-2">
+    <div class="nav-wrapper black">
+        <a href="{% url 'index' %}" class="brand-logo center orange-text" style="padding-left: 15px">Plex Dashboard</a>
+    </div>
+</nav>
+
+<div class="container center-item">
+    <div class="row">
+        {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+            <div class="col s12 m12 l12">
+                <div class="card red center-item">
+                    <div class="card-content">
+                            {{ message }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+        {% endif %}
+        <div class="col s12 m12 l12">
+            <div class="card black center-item">
+                <div class="card-content">
+                    <nav style="margin-bottom: 10%">
+                        <div class="nav-wrapper black orange-border-bottom thin-border-1">
+                            <a class="brand-logo orange-text">Login</a>
+                        </div>
+                    </nav>
+                    <div class="valign-wrapper orange-text">
+                        <form method="POST" action="" id="login-form"> {% csrf_token %}
+                            <div class="row">
+                                {{ loginform.non_field_errors }}
+                                <div class="input-field col s12">
+                                    <span class="red-text">{{ login.username.errors }}</span>
+                                    {{ loginform.username }}
+                                    <label for="{{ loginform.username.id_for_label }}" class="active" > Username:</label>
+                                </div>
+                                <div class=" input-field col s12">
+                                    <span class="red-text">{{ loginform.password.errors }}</span>
+                                    {{ loginform.password }}
+                                    <label for="{{ loginform.password.id_for_label }}" class="active" > Password:</label>
+                                </div>
+                            </div>
+                            <div class="waves-effect waves-teal btn-flat right orange"><input type="submit" value="Login"><i class="material-icons right">send</i></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src={% static "js/main.js" %}></script>
+</body>
+</html>

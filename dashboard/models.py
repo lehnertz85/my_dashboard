@@ -5,13 +5,13 @@ from django.forms import ModelForm
 
 
 class Services(models.Model):
-    app_name = models.CharField(max_length=512)
+    service_name = models.CharField(max_length=512)
     url = models.CharField(max_length=512)
     icon = models.CharField(max_length=512)
     is_visible = models.BooleanField()
 
     def __unicode__(self):
-        return '%s : %s' % (self.app_name, self.url)
+        return '%s : %s' % (self.service_name, self.url)
 
     def get_url(self):
         return self.url
@@ -41,9 +41,3 @@ class Drives (models.Model):
     class Meta:
         managed = True
         db_table = 'drives'
-
-
-# class ServicesForm (ModelForm):
-#     class Meta:
-#         models = Services
-#         fields = ['app_name', 'url', 'icon', 'is_visible']

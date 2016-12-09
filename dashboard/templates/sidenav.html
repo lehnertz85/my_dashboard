@@ -1,27 +1,40 @@
 <!-- Side menu /-->
 <nav class="orange-border-bottom thin-border-2">
     <div class="nav-wrapper black">
-        <a href="{% url 'index' %}" class="brand-logo orange-text" style="padding-left: 15px">Plex Dashboard</a>
+        <a href="{% url 'index' %}" class="brand-logo center orange-text waves-effect waves-light" style="padding-left: 15px">Plex Dashboard</a>
         <a href="" data-activates="slide-out" class="button-collapse show-on-large right"><i class="material-icons orange-text darken-4">menu</i></a>
+        <ul class="right hide-on-small-and-down">
+            <li>
+                <a href="{% url 'profile' username %}" class="btn-block white-text darken-4 waves-effect waves-orange right active valign">
+                    <i class="material-icons left">account_box</i>{{ username }}
+                </a>
+            </li>
+        </ul>
 
         <ul id="slide-out" class="side-nav grey darken-2">
             <li class="black lighten-3 orange-border-bottom orange-border-left thin-border-2">
-               <a href="#settings-modal" class="modal-trigger orange-text right-aligned">Menu<i class="orange-text darken-4 material-icons">{{ settings_icon.icon }}</i></a>
+               <a href="#settings-modal" class="modal-trigger orange-text right-aligned waves-effect waves-orange">Menu<i class="orange-text darken-4 material-icons">{{ settings_icon.icon }}</i></a>
             </li>
-            {% if settings%}
-                {% for app in settings %}
-                    {% if app.is_visible == True and app.app_name != 'Settings' %}
-{#                            {% url 'iframe' app.id as from_template %}#}
-                        <li class= "white darken-2 grey-border-bottom thin-border-1"><a href="{% url 'iframe' app.id %}" class="waves-effect waves-orange"><i class="orange-text darken-4 material-icons ">{{ app.icon }}</i>{{ app.app_name }}</a></li>
+            {% if services %}
+                {% for service in services %}
+                    {% if service.is_visible == True and service.service_name != 'Settings' %}
+                        <li class= "white darken-2 grey-border-bottom thin-border-1"><a href="{% url 'iframe' service.id %}" class="waves-effect waves-orange"><i class="orange-text darken-4 material-icons ">{{ service.icon }}</i>{{ service.service_name }}</a></li>
                     {% endif %}
                 {% endfor %}
             {% endif %}
-        <li class="orange-border-bottom thin-border-1">
-            <a href="#drives-modal" class="modal-trigger black orange-text ">Drives<i class="orange-text darken-4 material-icons">computer</i></a>
-        </li>
-        <li class="orange-border-bottom thin-border-1">
-            <a href="#help-modal" class="modal-trigger black orange-text">Help<i class="orange-text darken-4 material-icons">help</i></a>
-        </li>
+            <li class="orange-border-bottom thin-border-1">
+                <a href="#drives-modal" class="modal-trigger black orange-text waves-effect waves-orange">Drives<i class="orange-text darken-4 material-icons">computer</i></a>
+            </li>
+            <li class="orange-border-bottom thin-border-1">
+                <a href="#help-modal" class="modal-trigger black orange-text waves-effect waves-orange">Help<i class="orange-text darken-4 material-icons">help</i></a>
+            </li>
+            {#        Will only show on small screens       #}
+            <li class="orange-border-bottom thin-border-1 hide-on-med-and-up">
+                <a href="{% url 'profile' username %}" class="black white-text waves-effect waves-orange"><i class="white-text material-icons">account_box</i>{{ username }}</a>
+            </li>
+            <li class="orange-border-bottom thin-border-1">
+                <a href="{%  url 'logout' %}" class="black red-text waves-effect waves-orange">Logout<i class="red-text darken-4 material-icons">exit_to_app</i></a>
+            </li>
         </ul>
     </div>
 </nav>
