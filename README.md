@@ -4,6 +4,14 @@ A dashboard for Plex related services -- using Django
 
 Still in development. I would consider this beta stage. Everything works, but there are
  improvements to be made. More to come!
+ 
+#### Python Version
+    - v2.7
+    - Need to test against v3
+    
+#### Django Version
+    - v1.10.3
+ 
 
 Everything is working. Some cleanup is needed. 
 ## Here's the TODO list.
