@@ -5,6 +5,8 @@ A dashboard for Plex related services -- using Django
 Still in development. I would consider this beta stage. Everything works, but there are
  improvements to be made. More to come!
  
+ I'm still testing the fixtuer!
+ 
 #### Python Version
     - v2.7
     - Need to test against v3
@@ -28,18 +30,8 @@ Everything is working. Some cleanup is needed.
    8. Get logging working properly
    
 ## Changes since last commit.
-   1. Incorporated permission's and auth
-        - login page
-        - profile page (password reset)
-        - Multiple user's can login
-            * use the django admin console to add new users
-   2. Added form error messages
-   3. code cleanup and bug fixes
-   4. Ran migrations after changing an attribute
-   5. prep for versioning
-        - created a changelog file
-   6. removed unused code and files
-   7. Probably more that I have forgotten
+   1. Updated fixtures
+   2. removed the db
    
 ## Default Credentials
 Be sure to change at least the password. There are password restrictions listed (django defautl).
