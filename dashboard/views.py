@@ -45,7 +45,7 @@ def login_view(request):
     return render(request, 'login.html', context)
 
 
-@login_required()
+@login_required
 def logout_view(request):
     logout(request)
     return redirect('/dashboard/')
@@ -137,8 +137,8 @@ def getiframe(request, service_id=None):
 
     url = Services.objects.get(id=service_id)
 
-    settings = Services.objects.all()
-    settings_icon = Services.objects.get(app_name__exact='Settings')
+    services = Services.objects.all()
+    settings_icon = Services.objects.get(service_name__exact='Settings')
     title = General.objects.get(pk=1)
 
     # Create the Forms
@@ -168,7 +168,7 @@ def getiframe(request, service_id=None):
     context = {
         'drivesformset': drivesformset,
         'servicesformset': servicesformset,
-        'settings': settings,
+        'services': services,
         'settings_icon': settings_icon,
         'title': title,
         'url': url,
