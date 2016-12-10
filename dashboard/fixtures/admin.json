@@ -1,0 +1,366 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2016-11-09T07:47:49.236Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Headphones : https://github.com/rembo10/headphones",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_visible\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2016-11-09T07:58:12.856Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Plex : https://www.plex.tv/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_visible\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2016-11-09T17:23:14.895Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Plex : http://192.168.1.14:8989/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2016-11-11T18:01:59.166Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "Deluge : http://deluge-torrent.org/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2016-11-11T18:03:22.099Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Plex : http://192.168.1.14:8989/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2016-11-11T18:07:57.977Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "NZB Hydra : https://github.com/theotherp/nzbhydra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2016-11-11T18:08:26.437Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Glances : https://github.com/nicolargo/glances",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2016-11-11T18:08:49.366Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "PlexPy : https://github.com/drzoidberg33/plexpy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2016-11-11T18:12:34.208Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "PlexRequests : https://github.com/lokenx/plexrequests-meteor",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2016-11-11T18:12:53.855Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Headphones : https://github.com/rembo10/headphones",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2016-11-11T18:13:56.842Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "CouchPotato : https://couchpota.to/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2016-11-11T18:16:19.485Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "SickBeard : http://sickbeard.com/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2016-11-11T18:18:17.045Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Sonarr : https://sonarr.tv/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2016-11-11T18:20:32.589Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Pydio : https://pydio.com/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2016-11-11T18:21:14.851Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "SABnzbd : https://sabnzbd.org/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2016-11-11T18:21:46.766Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "NZBGet : https://nzbget.net/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2016-11-11T18:24:08.526Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "RuTorrent : https://github.com/Novik/ruTorrent",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2016-11-11T18:24:30.579Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Settings : settings.html",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2016-11-11T18:30:59.829Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Plex : http://192.168.1.14:8989/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2016-11-11T18:31:19.548Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Glances : https://github.com/nicolargo/glances",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2016-11-11T18:31:39.471Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "PlexRequests : https://github.com/lokenx/plexrequests-meteor",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2016-11-11T18:32:07.573Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "SickBeard : http://sickbeard.com/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2016-11-11T18:32:34.513Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Pydio : https://pydio.com/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2016-11-11T18:32:50.818Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "SABnzbd : https://sabnzbd.org/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2016-11-11T18:33:00.059Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "NZBGet : https://nzbget.net/",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2016-11-11T18:33:07.593Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "RuTorrent : https://github.com/Novik/ruTorrent",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2016-11-11T23:21:05.398Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Settings : settings.php",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2016-12-06T21:24:57.106Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"username\"]}}]"
+  }
+}
+]

@@ -1,0 +1,98 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "2xr35y88lue5qurnpp2lwrwmkfdkjrjs",
+  "fields": {
+    "session_data": "OGMyZDZhMDgyZjk5NTcwNjY1OTg0YjA4ZTFlMTMzZDhkM2Y3NjMwZjp7fQ==",
+    "expire_date": "2016-12-20T06:56:07.248Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "31k3v1w6xlgirshvn79ro9b5tu2xlw1g",
+  "fields": {
+    "session_data": "MWUwYjFhZGRkZmY5YTQyOGE3ZmE0NTRkNjI5NTI3ZDczOTcxYTc2NTp7Il9hdXRoX3VzZXJfaGFzaCI6IjgyNjdjYTEyZjA2Mjg3NmEyNDM3OTE2NTlmZWUxMTE1YzEzZjQzN2IiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2016-12-21T20:40:54.672Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3vj7xd3q85sgvxdyzk6fhow78k6fvz8a",
+  "fields": {
+    "session_data": "OGMyZDZhMDgyZjk5NTcwNjY1OTg0YjA4ZTFlMTMzZDhkM2Y3NjMwZjp7fQ==",
+    "expire_date": "2016-12-20T06:56:52.682Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4s1n9revl2qwg80tgp079izorvegtnvb",
+  "fields": {
+    "session_data": "MDRmOGJkYmE2ZjZkN2EwMmZkOWVhMTBmYTY2YzJiZjhlMjI5NDA2ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjVhN2EzMjY3YTUxMDFiNGMxMjIxODY5ODc4OTUzODI2ZGY3ZjdlNmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2016-12-10T06:18:33.374Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7q1k6yfly19gnloo6aw6r1qpkyck558d",
+  "fields": {
+    "session_data": "OGMyZDZhMDgyZjk5NTcwNjY1OTg0YjA4ZTFlMTMzZDhkM2Y3NjMwZjp7fQ==",
+    "expire_date": "2016-12-20T07:19:00.790Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7wt645lyfrmup2qkrf1yor3tlrkdehwz",
+  "fields": {
+    "session_data": "OGMyZDZhMDgyZjk5NTcwNjY1OTg0YjA4ZTFlMTMzZDhkM2Y3NjMwZjp7fQ==",
+    "expire_date": "2016-12-20T07:22:38.988Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8zmxbvf28i1d2fo5duco7ag1b9y4hukw",
+  "fields": {
+    "session_data": "MDRmOGJkYmE2ZjZkN2EwMmZkOWVhMTBmYTY2YzJiZjhlMjI5NDA2ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjVhN2EzMjY3YTUxMDFiNGMxMjIxODY5ODc4OTUzODI2ZGY3ZjdlNmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2016-11-23T05:48:55.744Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cja0cjnr8zdqufi7y59j30oq7v3hzqku",
+  "fields": {
+    "session_data": "MWUwYjFhZGRkZmY5YTQyOGE3ZmE0NTRkNjI5NTI3ZDczOTcxYTc2NTp7Il9hdXRoX3VzZXJfaGFzaCI6IjgyNjdjYTEyZjA2Mjg3NmEyNDM3OTE2NTlmZWUxMTE1YzEzZjQzN2IiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2016-12-23T03:35:48.272Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i2kw45cmhxk55ffcy8qk1um5b3kk1shu",
+  "fields": {
+    "session_data": "MWUwYjFhZGRkZmY5YTQyOGE3ZmE0NTRkNjI5NTI3ZDczOTcxYTc2NTp7Il9hdXRoX3VzZXJfaGFzaCI6IjgyNjdjYTEyZjA2Mjg3NmEyNDM3OTE2NTlmZWUxMTE1YzEzZjQzN2IiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2016-12-23T03:39:57.251Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l5o1zv2c1prplvlg9e6impyfqmt5e4nd",
+  "fields": {
+    "session_data": "MWUwYjFhZGRkZmY5YTQyOGE3ZmE0NTRkNjI5NTI3ZDczOTcxYTc2NTp7Il9hdXRoX3VzZXJfaGFzaCI6IjgyNjdjYTEyZjA2Mjg3NmEyNDM3OTE2NTlmZWUxMTE1YzEzZjQzN2IiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2016-12-23T03:08:56.199Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ww3b4efmkkiohum52vqaoit9wxzfge1h",
+  "fields": {
+    "session_data": "OGMyZDZhMDgyZjk5NTcwNjY1OTg0YjA4ZTFlMTMzZDhkM2Y3NjMwZjp7fQ==",
+    "expire_date": "2016-12-20T06:57:47.994Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y5ew32fmuycwgly80gnij4z4lcgj61it",
+  "fields": {
+    "session_data": "OGMyZDZhMDgyZjk5NTcwNjY1OTg0YjA4ZTFlMTMzZDhkM2Y3NjMwZjp7fQ==",
+    "expire_date": "2016-12-20T07:22:15.143Z"
+  }
+}
+]

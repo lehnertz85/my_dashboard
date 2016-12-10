@@ -1,0 +1,159 @@
+[
+{
+  "model": "dashboard.services",
+  "pk": 1,
+  "fields": {
+    "service_name": "Settings",
+    "url": "settings.html",
+    "icon": "settings",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 2,
+  "fields": {
+    "service_name": "RuTorrent",
+    "url": "https://github.com/Novik/ruTorrent",
+    "icon": "vpn_lock",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 3,
+  "fields": {
+    "service_name": "NZBGet",
+    "url": "https://nzbget.net/",
+    "icon": "file_download",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 4,
+  "fields": {
+    "service_name": "SABnzbd",
+    "url": "https://sabnzbd.org/",
+    "icon": "file_download",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 5,
+  "fields": {
+    "service_name": "Pydio",
+    "url": "https://pydio.com/",
+    "icon": "cloud_upload",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 6,
+  "fields": {
+    "service_name": "Sonarr",
+    "url": "https://sonarr.tv/",
+    "icon": "cancel",
+    "is_visible": false
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 7,
+  "fields": {
+    "service_name": "SickBeard",
+    "url": "http://sickbeard.com/",
+    "icon": "date_range",
+    "is_visible": false
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 8,
+  "fields": {
+    "service_name": "CouchPotato",
+    "url": "https://couchpota.to/",
+    "icon": "weekend",
+    "is_visible": false
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 9,
+  "fields": {
+    "service_name": "Headphones",
+    "url": "https://github.com/rembo10/headphones",
+    "icon": "headset",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 10,
+  "fields": {
+    "service_name": "PlexRequests",
+    "url": "https://github.com/lokenx/plexrequests-meteor",
+    "icon": "play_circle_filled",
+    "is_visible": false
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 11,
+  "fields": {
+    "service_name": "PlexPy",
+    "url": "https://github.com/drzoidberg33/plexpy",
+    "icon": "list",
+    "is_visible": false
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 12,
+  "fields": {
+    "service_name": "Glances",
+    "url": "https://github.com/nicolargo/glances",
+    "icon": "remove_red_eye",
+    "is_visible": false
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 13,
+  "fields": {
+    "service_name": "NZB Hydra",
+    "url": "https://github.com/theotherp/nzbhydra",
+    "icon": "search",
+    "is_visible": false
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 15,
+  "fields": {
+    "service_name": "Deluge",
+    "url": "http://deluge-torrent.org/",
+    "icon": "opacity",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.services",
+  "pk": 17,
+  "fields": {
+    "service_name": "Plex",
+    "url": "https://plex.tv",
+    "icon": "play_circle_outline",
+    "is_visible": true
+  }
+},
+{
+  "model": "dashboard.general",
+  "pk": 1,
+  "fields": {
+    "title": "Plex Dashboard - Manage your plex services"
+  }
+}
+]
