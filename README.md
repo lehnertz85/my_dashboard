@@ -33,6 +33,7 @@ Everything is working. Some cleanup is needed.
    6. maybe create installers with [pyinstaller](http://www.pyinstaller.org/), or stick with git
    7. ~~Instructions for getting started.~~
    8. Get logging working properly
+   9. Service status on home page
    
 ## Changes since last commit.
    1. Updated fixtures
