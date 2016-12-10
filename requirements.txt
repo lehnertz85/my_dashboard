@@ -1,3 +1,4 @@
 Django==1.10.3
 psutil
 bs4
+uwsgi

@@ -15,6 +15,7 @@ NOTE: You can use virtualenv if you want, or just install the requirements anywa
   - python manage.py makemigrations
   - python manage.py migrate
   - python manage.py loaddata contenttypes admin auth dashboard sessions
+  - sudo python manage.py collectstatic
 
 7. Start the server:
   - You could use nginx or apache
