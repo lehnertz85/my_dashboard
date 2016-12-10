@@ -131,11 +131,11 @@ def index(request):
 
 # Create the iframe
 @login_required
-def getiframe(request, app_id=2):
+def getiframe(request, service_id=None):
 
     username = request.user
 
-    url = Services.objects.get(id=app_id)
+    url = Services.objects.get(id=service_id)
 
     settings = Services.objects.all()
     settings_icon = Services.objects.get(app_name__exact='Settings')
