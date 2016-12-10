@@ -19,8 +19,9 @@ NOTE: You can use virtualenv if you want, or just install the requirements anywa
 
 7. Start the server:
   - You could use nginx or apache
-  - or, just run ./manage.py runserver 0.0.0.0:8000
+  - or, just run python manage.py runserver 0.0.0.0:8000
       * You can specify any port. It doesn't have to be 8000
+  - or, uwsgi --http :8000 --module plex_dashboard.wsgi if you are using MacOS or linux
 8. Navigate to localhost:8000/dashboard/
 9. Enjoy!
 
