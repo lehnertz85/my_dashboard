@@ -10,7 +10,7 @@ Still in development. I would consider this beta stage. Everything works, but th
  
 #### Python Version
     - v2.7
-    - Test against 3.5.2
+    - Tested against 3.5.2
     
 #### Django Version
     - v1.10.3
@@ -19,6 +19,9 @@ Still in development. I would consider this beta stage. Everything works, but th
     - MacOS
     - Lunux (used on Ubuntu)
     - Windows 10 (Windows 7 should work)
+
+#### Instalation
+Instructions are located in the repo and in the [wiki](https://github.com/lehnertz85/my_dashboard/wiki)
  
 
 Everything is working. Some cleanup is needed. 
