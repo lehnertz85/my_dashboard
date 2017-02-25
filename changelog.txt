@@ -1,21 +1,10 @@
 ##############################################################
-#   Plex Dashboard -- a Django project
-#   Version: 0.5.0
+#   My Dashboard -- a Django project
+#   Version: 0.3.0
 #
 #   Author -- William Lehnertz
 #
 #   License -- TBD
 ##############################################################
 
-   1. Incorporated permission's and auth
-        - login page
-        - profile page (password reset)
-        - Multiple user's can login
-            * use the django admin console to add new users
-   2. Added form error messages
-   3. code cleanup and bug fixes
-   4. Ran migrations after changing an attribute
-   5. prep for versioning
-        - created a changelog file
-   6. removed unused code and files
-   7. Probably more that I have forgotten
+   1. Rebranded the app and code cleanup

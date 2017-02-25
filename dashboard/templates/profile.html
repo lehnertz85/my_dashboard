@@ -13,13 +13,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'css/materialize.css' %}" rel="stylesheet">
-    <link href="{% static 'css/plex-dashboard.css' %}" rel="stylesheet">
+    <link href="{% static 'css/my-dashboard.css' %}" rel="stylesheet">
 </head>
 <body class="grey">
 
 <nav class="orange-border-bottom thin-border-2">
     <div class="nav-wrapper black">
-        <a href="{% url 'index' %}" class="brand-logo center orange-text waves-effect waves-orange" style="padding-left: 15px">Plex Dashboard</a>
+        <a href="{% url 'index' %}" class="brand-logo center orange-text waves-effect waves-orange" style="padding-left: 15px">{{ title.title }}</a>
         <ul>
             <li class="right waves-effect waves-orange">
                 <a href="{% url 'index' %}" class="btn-block waves-effect waves-orange active valign">

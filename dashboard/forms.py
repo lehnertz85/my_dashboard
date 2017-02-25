@@ -3,7 +3,6 @@ import re
 
 from django import forms
 from django.forms import BaseModelFormSet
-from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy as _
 from psutil import disk_usage
 
