@@ -31,7 +31,7 @@ def login_view(request):
             if user is not None:
                 login(request, user, backend=None)
                 messages.success(request, 'Logged in!')
-                return redirect('')
+                return redirect('/dashboard/')
             else:
                 messages.error(request, 'Username or password is incorrect')
     else:
@@ -48,7 +48,7 @@ def login_view(request):
 @login_required
 def logout_view(request):
     logout(request)
-    return redirect('')
+    return redirect('/login/')
 
 
 @login_required
@@ -61,7 +61,7 @@ def profile_view(request, username=None):
         if changeform.is_valid():
             user = changeform.save()
             update_session_auth_hash(request, user)
-            return redirect('')
+            return redirect('/dashboard/')
 
     else:
         changeform = PasswordChangeForm(username)
