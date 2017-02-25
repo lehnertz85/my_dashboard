@@ -30,63 +30,60 @@
 
 {%  include 'sidenav.html' %}
 
-{% block content %}
-    <div class="container">
-        <div class="row">
-            {% if drives %}
-                {% for drive, percent in drives.items %}
-            <div class="col s12 m12 l6">
-              <div class="card black">
+{% block iframe %}
+<div class="container">
+    <div class="row">
+        {% if drives %} {% for drive, percent in drives.items %}
+        <div class="col s12 m12 l6">
+            <div class="card black">
                 <div class="card-content">
-                  <div class="valign-wrapper">
-                    <h5 class="center orange-text col s4 "> {{ drive }} [{{ percent }}%]</h5>
-                    <div class="col s8">
-                    <div class="progress ">
-                        <div class="determinate" style="width: {{ percent }}%"></div>
+                    <div class="valign-wrapper">
+                        <h5 class="center orange-text col s4 "> {{ drive }} [{{ percent }}%]</h5>
+                        <div class="col s8">
+                            <div class="progress ">
+                                <div class="determinate" style="width: {{ percent }}%"></div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-                {% endfor %}
-            {% endif %}
         </div>
+        {% endfor %} {% endif %}
     </div>
-    <div class="container">
-        <div class="col s12 m12 l12">
-          <div class="card black">
+</div>
+<div class="container">
+    <div class="col s12 m12 l12">
+        <div class="card black">
             <div class="card-content white-text">
-              <p><span class="orange-text">Welcome to My Dashboard!</span> <br/><br>
-                  The top-right is a button to the menu. The menu lists all the services you
-                  wish to view. The cog next to the menu takes you to the settings. Settings is where you can modify
-                  the services in the menu. You can enable, disable, delete or add more.
-                  <ul>
-                    <li>Bear in mind, some websites don't allow themselves to be displayed in an iFrame. Github in one of them.</li>
-                 </ul>
-              </p>
+                <span class="orange-text">Welcome to My Dashboard!</span>
+                    <br/>
+                    The top-right is a button to the menu. The menu lists all the services you wish to view. The cog next to the menu takes you to the settings. Settings is where you can modify the services in the menu. You can enable, disable, delete or add more.
+                    <ul>
+                        <li>Bear in mind, some websites don't allow themselves to be displayed in an iFrame. Github in one of them.</li>
+                    </ul>
+                </p>
             </div>
-          </div>
         </div>
     </div>
-    <div class="container">
-        <div class="col s12 m12 l12">
-          <div class="card black">
+</div>
+<div class="container">
+    <div class="col s12 m12 l12">
+        <div class="card black">
             <div class="card-content white-text">
-              <p><span class="orange-text"> Icons:</span> <br/><br>
-                  Google Material icons are used. You can go to Google's <a href="https://material.io/icons/" target="_blank">materiial.io</a>  and search for icons.
-                  Once you have identified the icon you want, note the name. If the name includes multiple words,
-                  then type a _ between the words.<br>
-                  <ul class="browser-default">
-                    <li> Example: <code class="browser-default">"zoom in"</code> would turn into <code>"zoom_in"</code>.</li>
-                  </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-    </div>
+                <span class="orange-text"> Icons:</span>
+                    <br>
+                    Google Material icons are used. You can go to Google's <a href="https://material.io/icons/" target="_blank">material.io</a> and search for icons. Once you have identified the icon you want, note the name. If the name includes multiple words, then type a _ between the words.
+                    <ul class="browser-default">
+                        <li> Example: <code class="browser-default">"zoom in"</code> would turn into <code>"zoom_in"</code>.</li>
+                    </ul>
 
-{% endblock content %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock iframe %}
 
 {%  include 'modals.html' %}
 

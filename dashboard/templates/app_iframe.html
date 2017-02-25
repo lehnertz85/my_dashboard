@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block iframe %}
 <!-- iFrame stuff-->
 <div class="container-fluid constrain">
-<p class="white-text">{{ url }}</p>
+{#<p class="white-text">{{ url }}</p>#}
 <iframe src="{% if url %} {{ url.url }} {% endif %}" id="ifm" style="overflow: hidden;">
         Your browser doesn't support iframes!!
     </iframe>
 </div>
 
-{% endblock content %}
+{% endblock iframe %}

@@ -39,7 +39,7 @@ Everything is working. Some cleanup is needed.
    9. Create auto start instructions for all OSes.
    
 ## Changes since last commit.
-   1. Rebranded from Plex Dashboard to My Dashboard
+   1. Fix iframes from not showing
    
 ## Default Credentials
 Be sure to change at least the password through the profile menu item. There are password restrictions listed (django defautl).

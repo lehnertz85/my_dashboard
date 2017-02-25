@@ -54,7 +54,7 @@
     margin-left: 12px;
 }
 
-iframe#ifm {
+iframe #ifm {
     position:absolute;
     background-color: #fff;
     top:64px;

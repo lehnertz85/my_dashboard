@@ -102,7 +102,7 @@ def index(request):
             success_message = json.dumps({"success": "Saved!!!"})
             return HttpResponse(success_message)
         else:
-            # Reconfigure the errors becuase of MaterializesCSS' toasts
+            # Reconfigure the errors because of MaterializesCSS' toasts
             errors = analyze_errors(drivesformset, servicesformset)
             return HttpResponse(errors)
     else:
@@ -137,6 +137,8 @@ def getiframe(request, service_id=None):
 
     url = Services.objects.get(id=service_id)
 
+    print('The URL you clicked: ' + url.url)
+
     services = Services.objects.all()
     settings_icon = Services.objects.get(service_name__exact='Settings')
     title = General.objects.get(pk=1)
@@ -156,7 +158,7 @@ def getiframe(request, service_id=None):
             success_message = json.dumps({"success": "Saved!!!"})
             return HttpResponse(success_message)
         else:
-            # Reconfigure the errors becuase of MaterializesCSS' toasts
+            # Reconfigure the errors because of MaterializesCSS' toasts
             errors = analyze_errors(drivesformset, servicesformset)
             return HttpResponse(errors)
     else:
@@ -164,6 +166,7 @@ def getiframe(request, service_id=None):
         drivesformset = DrivesFormSet(prefix='driveForms')
 
     #logger.debug('****  Created iframe -- ')
+    print("created iframe")
 
     context = {
         'drivesformset': drivesformset,
